@@ -1,0 +1,18 @@
+<input type="button" value="GET Photo" ng-click="fnGetpic()">
+<div class="img-temp" ng-repeat="obj in data">
+    <div>
+        <p>Product Id:{{obj.id}}</p>
+        <p>Name:{{obj.title}}</p>
+        <p><a href="{{obj.url}}">Link</a></p>
+    </div>
+    <div>
+      <image src="{{obj.thumbnailUrl}}">
+    </div>
+</div>
+<div class="pagination">
+    <input id="go"type="text"/><input type="button" value="goto" ng-model="goto" ng-click="fnGoto()"/>
+    <div>
+        <input type="button" value="pre" ng-click="fnPre()">|<input type="button" ng-click="fnNext()" value="next">
+    </div>
+    <div><b>Total pages:{{totalpage}}</b></div>
+</div>
